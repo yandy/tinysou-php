@@ -329,13 +329,13 @@ class TinySou {
   }
 
   /**
-   * HTTP REQUEST 封装
-   * @param string $method HTTP REQUEST方法，包括PUT、POST、GET、OPTIONS、DELETE
-   * @param string $path 除Bucketname之外的请求路径，包括get参数
-   * @param array $headers 请求需要的特殊HTTP HEADERS
-   * @param array $body 需要POST发送的数据
+   * HTTP Request wrap
+   * @param string $method HTTP Request method
+   * @param string $path
+   * @param array $params GET params
+   * @param array $data POST body
    *
-   * @return mixed
+   * @return array
    */
   protected function request($method, $path, $params = array(), $data = array()) {
     $full_path = "{$this->base_uri}{$path}";
